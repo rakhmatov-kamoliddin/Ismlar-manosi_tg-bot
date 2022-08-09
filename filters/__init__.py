@@ -1,4 +1,3 @@
-from aiogram import Dispatcher
 from . import AdminFilter,GroupFilter,PrivateFilter
 from loader import dp
 # from .is_admin import AdminFilter

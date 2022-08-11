@@ -35,11 +35,11 @@ async def bot_start(message: types.Message):
         await bot.send_message(chat_id=ADMINS[0], text=err)
 
     await message.answer("Xush kelibsiz!",reply_markup=defaultkeyboard.defaults_buttons)
-    # await message.answer('Menu:',reply_markup=OurInlineKeyboard.Course)
-    # # Adminga xabar beramiz
-    # count = db.count_users()[0]
-    # msg = f"{message.from_user.full_name} bazaga qo'shildi.\nBazada {count} ta foydalanuvchi bor."
-    # await bot.send_message(chat_id=ADMINS[0], text=msg)
+    await message.answer('Menu:',reply_markup=OurInlineKeyboard.Course)
+    # Adminga xabar beramiz
+    count = db.count_users()[0]
+    msg = f"{message.from_user.full_name} bazaga qo'shildi.\nBazada {count} ta foydalanuvchi bor."
+    await bot.send_message(chat_id=ADMINS[0], text=msg)
 
 
 

@@ -46,4 +46,4 @@ async def bot_start(message: types.Message):
 @dp.message_handler(Command('count'))
 async def bot_start(message: types.Message):
     count = db.count_users()[0]
-    await message.answer(f"Botda {count}-ta foydalanuvchi mavjud!")
+    await message.answer(f"Botda {count}-ta foydalanuvchi mavjud!\n {ADMINS}")

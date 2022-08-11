@@ -12,8 +12,9 @@ from aiogram.dispatcher import FSMContext
 @dp.message_handler(Text('Ismlar manosi'))
 async def bot_echo(message: types.Message,state=FSMContext):
     await message.answer("Ismingizni kiriting !",reply_markup=defaultkeyboard.defaults_buttons)
-    await Form.ism.set()
-    @dp.message_handler(state=Form.ism)
+    # await Form.ism.set()
+    # @dp.message_handler(state=Form.ism)
+    @dp.message_handler()
     async def bot_ech(message: types.Message):
         
         data = ismlar_manosi(message.text)
@@ -24,4 +25,4 @@ async def bot_echo(message: types.Message,state=FSMContext):
             await message.reply(
             f"<a href='https://i.ibb.co/HLSd9N9/ism.jpg'>.</a><b>{name}</b>\nManosi : <b><i>{name_mean}</i></b>"
             )
-        await state.finish()
+        # await state.finish()

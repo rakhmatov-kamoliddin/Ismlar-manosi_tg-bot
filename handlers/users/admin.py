@@ -36,7 +36,7 @@ async def get_all_users(message: types.Message):
     
     
     
-@dp.message_handler(IsPrivate(), text="/advert")
+@dp.message_handler(IsPrivate(), text="/advert", user_id=ADMINS)
 async def send_ad_command(message: types.Message, state: FSMContext):
     await message.answer("Отправьте рекламу...")
     await state.set_state("advertisement")

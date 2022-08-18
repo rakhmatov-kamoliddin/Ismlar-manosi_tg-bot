@@ -24,7 +24,7 @@ async def bot_echo(message: types.Message,state=FSMContext):
                 name=content['name']
                 name_mean=content['name_mean']
                 await message.reply(
-                f"<a href='https://i.ibb.co/HLSd9N9/ism.jpg'>.</a><b>{name}</b>\nManosi : <b><i>{name_mean}</i></b>"
+                f"<a href='https://i.ibb.co/HLSd9N9/ism.jpg'>Ismingiz:</a><b>{name}</b>\nManosi : <b><i>{name_mean}</i></b>"
                 )
         else:
             print('Kechirasiz,siz qidirgan ism topilmadi!')

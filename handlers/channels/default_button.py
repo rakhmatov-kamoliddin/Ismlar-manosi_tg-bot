@@ -18,8 +18,8 @@ async def bot_echo(message: types.Message,state=FSMContext):
     async def bot_ech(message: types.Message):
         
         data = ismlar_manosi(message.text)
-        
-        if content in data:    
+       
+        if:
             for content in data:
                 name=content['name']
                 name_mean=content['name_mean']

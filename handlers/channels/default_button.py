@@ -19,10 +19,13 @@ async def bot_echo(message: types.Message,state=FSMContext):
         
         data = ismlar_manosi(message.text)
         
-        for content in data:
-            name=content['name']
-            name_mean=content['name_mean']
-            await message.reply(
-            f"<a href='https://i.ibb.co/HLSd9N9/ism.jpg'>.</a><b>{name}</b>\nManosi : <b><i>{name_mean}</i></b>"
-            )
+        try:    
+            for content in data:
+                name=content['name']
+                name_mean=content['name_mean']
+                await message.reply(
+                f"<a href='https://i.ibb.co/HLSd9N9/ism.jpg'>.</a><b>{name}</b>\nManosi : <b><i>{name_mean}</i></b>"
+                )
+        except:
+            print('Kechirasiz,siz qidirgan ism topilmadi!')
         # await state.finish()
